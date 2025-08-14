@@ -86,7 +86,7 @@ autoSlider(index);
 
 const bio = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/data/bio.json')
+    request.open('GET', './data/bio.json')
     request.setRequestHeader('Content-type', 'application/json')
     request.send()
 

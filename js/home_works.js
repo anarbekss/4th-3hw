@@ -112,7 +112,7 @@ function showModal() {
 
 function characters() {
   const character = new XMLHttpRequest();
-  character.open("GET", "/data/characters.json");
+  character.open("GET", "./data/characters.json");
   character.setRequestHeader("content-type", "application/json");
   character.send();
 
@@ -149,7 +149,6 @@ function characters() {
       character_card.appendChild(Name);
       character_card.appendChild(Age);
       character_card.appendChild(div_photo);
-      // -------------------------------------------------------------------------
 
       characters_list.appendChild(character_card);
     });
