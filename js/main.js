@@ -78,3 +78,26 @@ prev.onclick = () => {
 }
 
 autoSlider(index);
+
+
+
+// -----------------------------------------------------------------------------------------------------------
+
+
+const bio = () => {
+    const request = new XMLHttpRequest()
+    request.open('GET', '/data/bio.json')
+    request.setRequestHeader('Content-type', 'application/json')
+    request.send()
+
+   
+
+    request.onload = () => {
+        const BIO = JSON.parse(request.response);
+
+        console.log(`Name: ${BIO.name}`);
+        console.log(`Age: ${BIO.age}`);
+        console.log(`Bio: ${BIO.bio}`);
+    }
+}
+bio()

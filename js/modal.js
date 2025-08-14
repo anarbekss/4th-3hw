@@ -22,3 +22,5 @@ modal.onclick = (event) => {
     if (event.target === modal)
         closeModal()
 }
+
+

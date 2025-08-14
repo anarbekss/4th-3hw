@@ -195,7 +195,11 @@
 /*--------CHARACTERS---------*/
 
 .characters {
-    background: var(--black);
+    background-image: url('https://wallpapers.com/images/hd/avatar-aang-sunset-contemplation-rm1rxt83snz4ltce.jpg   ');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .characters-list {
@@ -209,7 +213,7 @@
 .character-card {
     border: 2px solid var(--orange);
     padding: 10px;
-    width: 250px;
+    width: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -218,9 +222,8 @@
 
 .character-photo {
     width: 100%;
-    height: 250px;
+    height: 300px;
     border: 2px solid var(--orange);
-    margin: 0 auto;
 }
 
 .character-photo img {
@@ -228,3 +231,4 @@
     height: 100%;
     object-fit: cover;
 }
+

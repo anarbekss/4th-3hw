@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Аанг",
+      "age": 12,
+      "element": "воздух",
+      "character_photo": "https://avatars.dzeninfra.ru/get-zen_doc/3956088/pub_6315b99929b9a06fa48395e8_6315ba2184104f52e961a5ae/scale_1200"
+    },
+    {
+      "name": "Катара",
+      "age": 14,
+      "element": "вода",
+      "character_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUYTvlcIvizJV90q154_pn-WwW628T0iULw&s"
+    },
+    {
+      "name": "Сокка",
+      "age": 15,
+      "element": "нет стихии",
+      "character_photo": "https://preview.redd.it/full-build-friday-sokka-v0-5fem768hw49b1.png?width=563&format=png&auto=webp&s=d964594a30198d69a6aafbf552153df504fed115"
+    },
+    {
+      "name": "Топх Бейфонг",
+      "age": 12,
+      "element": "земля",
+      "character_photo": "https://i.ebayimg.com/images/g/rTkAAOSwhTpnFpVQ/s-l1200.jpg"
+    },
+    {
+      "name": "Зуко",
+      "age": 16,
+      "element": "огонь",
+      "character_photo": "https://cosplayfu-website.s3.amazonaws.com/_Upload/b/9999-Zuko-Cosplay-from-Avatar-The-Last-Airbender-1.jpg"
+    },
+    {
+      "name": "Азула",
+      "age": 14,
+      "element": "огонь",
+      "character_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnhgRKsyKEokWo33FDdSmBEZzluKj6E4QxBg&s"
+    },
+    {
+      "name": "Аппа",
+      "age": "неизвестно",
+      "element": "воздух",
+      "character_photo": "https://i.pinimg.com/736x/20/ff/68/20ff688435c2e81a60b20261c7c4f811.jpg"
+    },
+    {
+      "name": "Момо",
+      "age": "неизвестно",
+      "element": "нет стихии",
+      "character_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDiPXZ0Ucxz4KFRx8kRegF71_A33lzVOHP-Q&s"
+    }
+  ]
+  

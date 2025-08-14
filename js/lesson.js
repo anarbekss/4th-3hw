@@ -37,13 +37,13 @@ let sliderId = 0
 const slider = (i = 0) => {
    sliderId = setInterval(() => {
     i++
-    if (i > tabs.length - 1) {
+    if (i >= tabs.length ) {
       i = 0
     }
     hideTabContent()
     showTabContent(i)
     
-  }, 5000)
+  }, 2000)
 }
 
 slider()
@@ -63,18 +63,16 @@ TabParent.onclick = (event) => {
 }
 
 
-let modalShown = false; // флаг — показали ли модалку
-
+let modalShown = false;
 window.addEventListener('scroll', () => {
-  if (modalShown) return; // если уже показали — выходим
-
+  if (modalShown) return; 
   const windowHeight = window.innerHeight;
   const scrollTop = window.scrollY || window.pageYOffset;
   const docHeight = document.documentElement.scrollHeight;
 
   if (scrollTop + windowHeight >= docHeight - 5) {
     showModal();
-    modalShown = true; // больше не показываем
+    modalShown = true; 
   }
 });
 
