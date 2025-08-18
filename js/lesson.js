@@ -121,6 +121,7 @@ const converter = (element) => {
 
 converter(usdInput);
 converter(somInput);
+converter(eurInput)
 
 
 
