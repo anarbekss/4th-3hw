@@ -90,8 +90,6 @@ const bio = () => {
     request.setRequestHeader('Content-type', 'application/json')
     request.send()
 
-   
-
     request.onload = () => {
         const BIO = JSON.parse(request.response);
 

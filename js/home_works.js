@@ -126,7 +126,7 @@ function characters() {
       const character_card = document.createElement("div");
       character_card.classList.add(".character-card");
 
-      const Name = document.createElement("p");
+      const Name = document.createElement("h2");
       Name.style.textAlign = 'start'
       Name.innerText = char.name;
 
@@ -144,10 +144,10 @@ function characters() {
 
       div_photo.appendChild(Img)
 
-      character_card.appendChild(div_photo);
       character_card.appendChild(Name);
       character_card.appendChild(Age);
-
+      character_card.appendChild(div_photo);
+      
       characters_list.appendChild(character_card);
     });
   };

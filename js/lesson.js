@@ -13,9 +13,7 @@ const hideTabContent = () => {
   tabs.forEach((tab) => {
     tab.classList.remove('tab_content_item_active');
   });
-  setTimeout(() => {
-    element.style.display = 'none';
-  }, 500);
+  
   
 };
 
@@ -81,6 +79,48 @@ function showModal() {
   modal.style.display = 'block';
 }
 
+
+// CONVERTER----------------------------------------------------------
+
+const usdInput = document.querySelector('#usd');
+const somInput = document.querySelector('#som');
+const eurInput = document.querySelector('#eur');
+
+
+const converter = (element) => {
+  element.oninput = () => {
+    const request = new XMLHttpRequest();
+    request.open('GET', '../data/converter.json');
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send();
+
+    request.onload = () => {
+      const data = JSON.parse(request.response);
+      if (element.id === 'som') {
+        usdInput.value = (element.value / data.usd).toFixed(2);
+        eurInput.value = (element.value / data.eur).toFixed(2);
+      }
+
+      if (element.id === 'usd') {
+        somInput.value = (element.value * data.usd).toFixed(2);
+        eurInput.value = (element.value * (data.usd / data.eur)).toFixed(2);
+      }
+
+      if (element.id === 'eur') {
+        somInput.value = (element.value * data.eur).toFixed(2);
+        usdInput.value = (element.value * (data.eur / data.usd)).toFixed(2);
+      }
+      if (element.value === '') {
+        usdInput.value = ''
+        somInput.value = ''
+        eurInput.value = ''
+      }
+    }
+  }
+}
+
+converter(usdInput);
+converter(somInput);
 
 
 
