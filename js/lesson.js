@@ -151,7 +151,7 @@ function loadCard(id) {
       card.innerHTML = `
         <p><b>ID:</b> ${id}</p>
         <p><b>Title:</b> ${title}</p>
-        <p style="color:${color}"><b>Status:</b> ${completed ? '✅ Done' : '❌ Not done'}</p>
+        <p style="color:${color}"><b>Status:</b> ${completed ? 'True' : 'false'}</p>
       `;
     })
     .catch(err => {
