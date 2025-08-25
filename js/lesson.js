@@ -60,6 +60,7 @@ TabParent.onclick = (event) => {
     }
 }
 
+// -------------------------------------------------------------------------- 
 
 let modalShown = false;
 window.addEventListener('scroll', () => {
@@ -121,7 +122,50 @@ const converter = (element) => {
 
 converter(usdInput);
 converter(somInput);
-converter(eurInput)
+converter(eurInput  )
+
+
+
+
+
+
+
+
+
+const BtnNext = document.querySelector('#btn-next');
+const BtnPrev = document.querySelector('#btn-prev');
+const card = document.querySelector('.card');
+
+let CardId = 1;
+
+function loadCard(id) {
+  if (id < 1) id = 200;
+  if (id > 200) id = 1;
+  CardId = id;
+
+  fetch(`https://jsonplaceholder.typicode.com/todos/${CardId}`)
+    .then(response => response.json())
+    .then(data => {
+      const { title, id, completed } = data;
+      const color = completed ? 'green' : 'red';
+      card.innerHTML = `
+        <p><b>ID:</b> ${id}</p>
+        <p><b>Title:</b> ${title}</p>
+        <p style="color:${color}"><b>Status:</b> ${completed ? '✅ Done' : '❌ Not done'}</p>
+      `;
+    })
+    .catch(err => {
+      console.error(err);
+      card.innerHTML = `<p>Ошибка загрузки...</p>`;
+    });
+}
+
+BtnNext.onclick = () => loadCard(CardId + 1);
+BtnPrev.onclick = () => loadCard(CardId - 1);
+
+
+loadCard(CardId);
+
 
 
 
